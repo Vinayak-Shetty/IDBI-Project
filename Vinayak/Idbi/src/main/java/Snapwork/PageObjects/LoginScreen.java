@@ -40,7 +40,7 @@ public class LoginScreen {
 		driver.get("https://robotics.idbibank.com/idbiweb/#login");
 	}
 	
-	public Dashboard loginApplication(String custID, String password) throws InterruptedException {
+	public Coachguide loginApplication(String custID, String password) throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		userCustID.sendKeys(custID);
 		continueToLogin.click();
@@ -49,8 +49,8 @@ public class LoginScreen {
 		userPassword.sendKeys(password);
 		tcCheckBox.click();
 		loginBtn.click();
-		Dashboard dashboard = new Dashboard(driver);
-		return dashboard;
+		Coachguide coachguide = new Coachguide(driver);
+		return coachguide;
 		
 	}
 	

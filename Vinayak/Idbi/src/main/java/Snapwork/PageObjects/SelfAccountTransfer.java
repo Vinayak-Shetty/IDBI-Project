@@ -21,13 +21,8 @@ public class SelfAccountTransfer extends AbstractComponent{
 	@FindBy(css="[class*='one']")
 	WebElement fromAccountDropdown;
 	
-	@FindBy(xpath = "//p[@translate='SELF_ACCOUNT_TRANSFER']")
-	WebElement selfAccountTransferBtn;
-	
 	public void clickFromAccountDropdown() throws InterruptedException {
-		Thread.sleep(1000);
-		scrollToView(selfAccountTransferBtn);
-		selfAccountTransferBtn.click();
+		sleep(5);
 		fromAccountDropdown.click();
 	}
 	

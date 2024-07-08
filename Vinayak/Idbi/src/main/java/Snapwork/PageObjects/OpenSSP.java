@@ -21,12 +21,6 @@ public class OpenSSP extends AbstractComponent{
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "//span[@class='ui-accordion-header-icon ui-icon ui-icon-triangle-1-e']")
-	List<WebElement> InvestmentBtn;
-	
-	@FindBy(xpath = "//div[contains(text(),'Open SSP/SSP Plus')]")
-	WebElement OpenSSPsubmenuOption;
-	
 	@FindBy(xpath = "//em[@class='ico-dropdown two']")
 	WebElement accountDropdownArrowIcon;
 	
@@ -76,9 +70,6 @@ public class OpenSSP extends AbstractComponent{
 //	WebElement MaturityInstructionDropdown = DropdownArrowIcon.get(3);
 	
 	public void createSSP() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		InvestmentBtn.get(2).click();
-		OpenSSPsubmenuOption.click();
 		sleep(5);
 		accountDropdownArrowIcon.click();
 		selectAccount.click();

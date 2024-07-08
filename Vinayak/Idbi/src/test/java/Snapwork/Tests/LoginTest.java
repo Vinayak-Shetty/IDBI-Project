@@ -2,7 +2,7 @@ package Snapwork.Tests;
 
 import org.testng.annotations.Test;
 
-import Snapwork.PageObjects.Dashboard;
+import Snapwork.PageObjects.Coachguide;
 import Snapwork.TestComponents.BaseTest;
 
 public class LoginTest extends BaseTest{

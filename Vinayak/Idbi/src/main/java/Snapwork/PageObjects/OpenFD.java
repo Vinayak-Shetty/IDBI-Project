@@ -21,12 +21,6 @@ public class OpenFD extends AbstractComponent{
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath = "//span[@class='ui-accordion-header-icon ui-icon ui-icon-triangle-1-e']")
-	List<WebElement> InvestmentBtn;
-	
-	@FindBy(xpath = "//ul[@id='sub-menu-invest']/li/div[1]")
-	WebElement OpenFDsubmenuOption;
-	
 	@FindBy(xpath = "//a[@class='list-block slide-link one']//em[@class='ico-dropdown']")
 	WebElement accountDropdownArrowIcon;
 	
@@ -85,9 +79,6 @@ public class OpenFD extends AbstractComponent{
 //	WebElement MaturityInstructionDropdown = DropdownArrowIcon.get(3);
 	
 	public void createFD() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		InvestmentBtn.get(2).click();
-		OpenFDsubmenuOption.click();
 		sleep(5);
 		accountDropdownArrowIcon.click();
 		selectAccount.click();

@@ -18,15 +18,18 @@ public class AbstractComponent {
 		PageFactory.initElements(driver, this);
 	}
 
+	// Scroll to brink that element in view of Screen
 	public void scrollToView(WebElement element) {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
+	// Wait for sometime
 	public void sleep(int timevalue) throws InterruptedException {
 		int time = timevalue*1000;
 		Thread.sleep(timevalue);
 	}
 	
+	// Click to the left side of that clickable element
 	public void clickActionToLeftOfElement(WebElement element) {
 		Actions actions = new Actions(driver);
 
